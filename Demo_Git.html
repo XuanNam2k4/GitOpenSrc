@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Một số lệnh Git cơ bản</title>
 </head>
+<style>
+    body{
+        font-size: 20px;
+    }
+</style>
 <body>
     <ul>
+        <li><strong>Tạo reposibility , dấu + create new reposibility</strong></li>
         <li><strong>Sử dụng terminal hoặc Cmd:</strong></li>
         <li><strong>git config --global user.name " "</strong>:Tên username của Github</li>
         <li><strong>git config --global user.email " "</strong>:Tên email của Github</li>
@@ -33,6 +39,33 @@
         <li><strong>git commit -m "Nội dung" (ví dụ:) git commit -m "cap nhat Demo_Git.html file" </strong>: Lưu từ khu vực chờ vào local repository</li>
         <li><strong>git push origin main</strong>:đẩy code lên lại github</li>
     </ul>
-    <ul></ul>
+    <ul>
+        <li><strong>Cách thêm file lên github:</strong></li>
+        <li><strong>git add .</strong>:git add . thêm lên github từ máy không cần tạo thêm file mà đồng bộ file cũ</li>
+        <li><strong>git commit -m "Nội dung"</strong>: Lưu từ khu vực chờ vào local repository</li>
+        <li><strong>git push</strong>: đẩy nội dung lên github</li>
+    </ul>
+     <ul>
+        <li><strong>Cách lấy code về từ file github:</strong></li>
+        <li><strong>giả sử git commit trong file index.html</strong>:có ghi thêm khi chỉnh sửa trong Edit This File ở thẻ "h3"</li>
+        <li><strong>git pull</strong>: kéo code github về lại máy</li>
+    </ul>
+    <ul>
+        <li><strong>Cách làm việc nhóm:</strong></li>
+        <li> <strong>Thư mục Code</strong>: copy chỗ https cái url : ví dụ: https://github.com/XuanNam2k4/GitOpenSrc.git
+        <li><strong>Vào command line </strong>: gõ git clone dán vào url vào</li>
+        <li><strong>gõ cd tên đề tài github</strong> ví dụ: cd GitOpenSrc</li>
+        <li><strong>gõ dir</strong> , tiếp gõ code Demo_Git.html</li>
+    </ul>
+    <ul>
+        <li><strong>Nâng cao:</strong></li>
+        <li><strong>Tạo thêm nhánh git branch (tên link mới)</strong> : ví dụ: git branch add-link-about</li>
+        <li><strong>git branch</strong>:kiểm tra nhánh hiện tại</li>
+        <li><strong>git checkout (tên link mới)</strong>: ví dụ: git checkout add-link-about :từ nhánh (main) chuyển code qua nhánh add-link-about</li>
+        <li><strong>Ví dụ tạo file about:</strong>Để làm cách Add Message</li>
+        <li><strong>Source control (Ctrol + Shift + G)</strong>: ,chọn Staged Changes (ví dụ: about.html)</li>
+        <li><strong>trên ô message</strong>:gõ add-link-message,chọn Commit</li>
+        <li><strong> gõ git push trên terminal</strong>:thêm lệnh upstream , gõ trên terminal ví dụ: git push --set-upstream origin add-link-about</li>
+    </ul>
 </body>
 </html>
