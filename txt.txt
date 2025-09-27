@@ -1,0 +1,33 @@
+git restore .
+git add Process.php
+git commit -m "Thêm file Process.php"
+git pull origin main --rebase
+git push origin main1. git restore .
+
+restore = khôi phục lại các file trong working directory về trạng thái ở commit gần nhất.
+
+Dấu . = áp dụng cho toàn bộ thư mục dự án.
+👉 Tức là: bạn hủy bỏ việc xóa các file trong LearnGit ở local, trả chúng về như trên GitHub/local commit trước đó.
+
+2. git add Process.php
+
+Đưa file Process.php (mới tạo) vào staging area để chuẩn bị commit.
+👉 Nghĩa là báo cho Git biết: “tôi muốn đưa file này vào bản commit tiếp theo”.
+
+3. git commit -m "Thêm file Process.php"
+
+Tạo một commit mới trong local repo, chứa thay đổi Process.php.
+👉 Giờ trong lịch sử Git local, bạn đã có một commit mới thêm file này.
+
+4. git pull origin main --rebase
+
+Lấy (fetch) các commit mới nhất từ remote (GitHub) về.
+
+--rebase = thay vì merge, nó sẽ “đặt” commit mới của bạn (Thêm Process.php) lên trên commit từ GitHub → lịch sử gọn gàng, không có merge commit lộn xộn.
+👉 Bước này giúp local và remote đồng bộ, không bị lỗi “non-fast-forward”.
+
+5. git push origin main
+
+Đẩy commit mới (có Process.php) từ local lên GitHub.
+👉 Sau bước này, file Process.php sẽ xuất hiện trong repo trên GitHub.
+
